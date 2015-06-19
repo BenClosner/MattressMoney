@@ -17,8 +17,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DisplayMessageActivity"
-            android:label="@string/title_activity_display_message"
+            android:name=".CreateAccountActivity"
+            android:label="@string/title_activity_create_account"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mattressmoney.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ActivityTwo"
+            android:label="@string/title_activity_activity_two"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

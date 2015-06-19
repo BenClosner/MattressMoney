@@ -1,34 +1,23 @@
 package mattressmoney.myapplication;
 
-import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 
 
-public class MainActivity extends ActionBarActivity {
-
-    public final static String EXTRA_MESSAGE = "mattressmoney.myapplication.MESSAGE";
-    String msg = "Android : ";
+public class CreateAccountActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        setContentView(R.layout.activity_create_account);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_create_account, menu);
         return true;
     }
 
@@ -45,15 +34,5 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void startMainMenu(View view){
-        Intent intent = new Intent(this, ActivityTwo.class);
-        startActivity(intent);
-    }
-
-    public void createAccount(View view) {
-        Intent intent = new Intent(this, CreateAccountActivity.class);
-        startActivity(intent);
     }
 }

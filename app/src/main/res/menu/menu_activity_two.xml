@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="mattressmoney.myapplication.ActivityTwo" >
+
+    <item android:id="@+id/activity_two_ab_menu"
+          android:title="menu ph"
+
+          app:showAsAction="ifRoom"
+          android:top="30dp">
+        <menu>
+            <item
+                android:id="@+id/first_menu_item"
+                android:title="profile view placeholder" />
+            <item
+                android:id="@+id/second_menu_item"
+                android:title="lookup stocks to buy placeholder" />
+            <item
+                android:id="@+id/third_menu_item"
+                android:title="sell stocks placeholder" />
+            <item
+                android:id="@+id/fourth_menu_item"
+                android:title="leaderboards placeholder" />
+            <item
+                android:id="@+id/fifth_menu_item"
+                android:title="settings placeholder" />
+            <item
+                android:id="@+id/sixth_menu_item"
+                android:title="logout placeholder" />
+        </menu>
+    </item>
+</menu>

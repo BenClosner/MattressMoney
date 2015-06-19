@@ -2,19 +2,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:background="@mipmap/mattresspic"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mattress"
+        android:textSize="48sp"
+        android:gravity="center"
+        android:textColor="@color/darkgreen"
+        android:paddingTop="30dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/money"
+        android:textSize="56sp"
+        android:gravity="center"
+        android:textColor="@color/green" />
+
 
     <EditText
         android:id="@+id/edit_message"
-        android:layout_width="0dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/edit_message"
-        android:layout_weight='1' />
+        android:inputType="textVisiblePassword"/>
 
-    <Button
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
-        android:onClick="sendMessage" />
+        android:fontFamily="sans-serif"
+        android:hint="@string/password" />
+
+    <CheckBox
+        android:id="@+id/checkbox_remember_me"
+        android:text="@string/checkbox_remember_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create"
+            android:onClick="createAccount"
+            android:layout_gravity="center"
+            android:background="@color/darkgreen"
+            android:layout_marginRight="16dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:onClick="startMainMenu"
+            android:layout_gravity="center"
+            android:background="@color/green"/>
+
+
+    </LinearLayout>
 
 </LinearLayout>

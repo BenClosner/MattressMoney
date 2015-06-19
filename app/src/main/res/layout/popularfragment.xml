@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include android:id="@+id/list_item1" layout="@layout/list_item" />
+    <include android:id="@+id/list_item2" layout="@layout/list_item" />
+    <include android:id="@+id/list_item3" layout="@layout/list_item" />
+    <include android:id="@+id/list_item4" layout="@layout/list_item" />
+    <include android:id="@+id/list_item5" layout="@layout/list_item" />
+    <include android:id="@+id/list_item6" layout="@layout/list_item" />
+    <include android:id="@+id/list_item7" layout="@layout/list_item" />
+
+
+    <TextView
+        android:id="@+id/profilefragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="placeholder for popular fragment" />
+
+</LinearLayout>
