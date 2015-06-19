@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/list_item_LL"
+              android:background="@color/grey"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:weightSum="6"
+              android:layout_height="60dp" >
+
+    <TextView
+        android:id="@+id/list_item_ticker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:textSize="25dp"
+        android:text="(TICKER)"
+        android:layout_weight="2"
+        android:gravity="left"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/list_item_fullname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scrollHorizontally="false"
+        android:layout_weight="2"
+        android:text="FULLNAMECO longgggg name co text wrap trial" />
+
+    <ImageView
+        android:id="@+id/list_item_icon"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:src="@mipmap/green_up_arrow"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/list_item_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="0000.00" />
+
+        <TextView
+            android:id="@+id/list_item_changeflat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="+-00.00" />
+
+        <TextView
+            android:id="@+id/list_item_changepercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="+-00.00%" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
