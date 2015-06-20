@@ -20,6 +20,7 @@ public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("vvvv", "oncreate activitytwo");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_two);
 
