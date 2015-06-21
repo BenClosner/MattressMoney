@@ -33,6 +33,7 @@ public class PopularFragment extends Fragment {
 
         LinearLayout ll = (LinearLayout) V.findViewById(R.id.ll);
 
+
         for(int i = 1; i <= 15; ++i){
             View currentItem = getLayoutInflater(savedInstanceState).inflate(R.layout.list_item, null);
 
@@ -43,6 +44,8 @@ public class PopularFragment extends Fragment {
             else {
                 background.setBackgroundColor(getResources().getColor(R.color.grey));
             }
+
+
 
             ll.addView(currentItem);
         }

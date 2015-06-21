@@ -4,29 +4,31 @@
       tools:context="mattressmoney.myapplication.ActivityTwo" >
 
     <item android:id="@+id/activity_two_ab_menu"
-          android:title="menu ph"
-
-          app:showAsAction="ifRoom"
-          android:top="30dp">
+          android:title="@string/select_menu_base"
+          android:icon="@mipmap/menu_icon"
+          app:showAsAction="ifRoom" >
         <menu>
             <item
-                android:id="@+id/first_menu_item"
-                android:title="profile view placeholder" />
+                android:id="@+id/menu_profile"
+                android:title="@string/select_profile" />
             <item
-                android:id="@+id/second_menu_item"
-                android:title="lookup stocks to buy placeholder" />
+                android:id="@+id/menu_stocks"
+                android:title="@string/select_stocks" />
             <item
-                android:id="@+id/third_menu_item"
-                android:title="sell stocks placeholder" />
+                android:id="@+id/menu_lookup"
+                android:title="@string/select_lookup" />
             <item
-                android:id="@+id/fourth_menu_item"
-                android:title="leaderboards placeholder" />
+                android:id="@+id/menu_sell"
+                android:title="@string/select_sell" />
             <item
-                android:id="@+id/fifth_menu_item"
-                android:title="settings placeholder" />
+                android:id="@+id/menu_leaderboards"
+                android:title="@string/select_leaderboards" />
             <item
-                android:id="@+id/sixth_menu_item"
-                android:title="logout placeholder" />
+                android:id="@+id/menu_setings"
+                android:title="@string/select_settings" />
+            <item
+                android:id="@+id/menu_logout"
+                android:title="@string/select_lookup" />
         </menu>
     </item>
 </menu>

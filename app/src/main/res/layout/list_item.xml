@@ -6,7 +6,7 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:weightSum="6"
-              android:layout_height="60dp" >
+              android:layout_height="wrap_content" >
 
     <TextView
         android:id="@+id/list_item_ticker"
@@ -30,7 +30,7 @@
 
     <ImageView
         android:id="@+id/list_item_icon"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:src="@mipmap/green_up_arrow"/>
@@ -70,7 +70,4 @@
             android:text="+-00.00%" />
 
     </LinearLayout>
-
-
-
 </LinearLayout>

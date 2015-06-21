@@ -1,5 +1,6 @@
 package mattressmoney.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentTransaction;
@@ -8,8 +9,11 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListener {
 
@@ -20,7 +24,6 @@ public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("vvvv", "oncreate activitytwo");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_two);
 
@@ -89,9 +92,33 @@ public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListe
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_activity_two, menu);
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.actionbar);
-        getSupportActionBar().setTitle("Stocks");
+
+        //on the dropdown menu, grey out the current page
+        MenuItem current_tab = menu.findItem(R.id.menu_stocks);
+        current_tab.setEnabled(false);
+
+
+
+        ActionBar supbar = getSupportActionBar();
+        supbar.setDisplayShowCustomEnabled(true);
+        supbar.setDisplayShowTitleEnabled(false);
+
+
+        //hack a custom view into the action bar
+        //first open up a view, modify it, and add it with setCustomView
+        View title_and_money = getLayoutInflater().inflate(R.layout.actionbar, null);
+
+        //set the title to 'stocks;
+        TextView title_text =(TextView) title_and_money.findViewById(R.id.actionbar_title);
+        title_text.setText(getResources().getString(R.string.select_stocks));
+
+        //set money to whatever
+        TextView money_text =(TextView) title_and_money.findViewById(R.id.actionbar_money);
+        money_text.setText("100$");
+
+        //add the custom view to the action bar
+        supbar.setCustomView(title_and_money);
+
         return true;
     }
 
@@ -106,6 +133,7 @@ public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListe
         if (id == R.id.action_settings) {
             return true;
         }
+        //else if (id == R.id.menu_profile){startActivity(new Intent("com.mattressmoney.UserProfile"));}
 
         return super.onOptionsItemSelected(item);
     }
