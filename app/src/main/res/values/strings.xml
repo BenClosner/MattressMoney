@@ -19,6 +19,10 @@
     <string name="title_activity_main_menu">MainMenu</string>
     <string name="title_activity_activity_two">ActivityTwo</string>
 
+    <!-- settings activity -->
+    <string name="setting">MISC SETTINGS</string>
+    <string name="about">About Us</string>
+
     <!-- dropdown menu select items -->
     <string name="select_menu_base">Menu</string>
     <string name="select_profile">Profile</string>
