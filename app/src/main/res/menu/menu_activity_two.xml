@@ -9,11 +9,11 @@
           app:showAsAction="ifRoom" >
         <menu>
             <item
-                android:id="@+id/menu_profile"
-                android:title="@string/select_profile" />
-            <item
                 android:id="@+id/menu_stocks"
                 android:title="@string/select_stocks" />
+            <item
+                android:id="@+id/menu_profile"
+                android:title="@string/select_profile" />
             <item
                 android:id="@+id/menu_lookup"
                 android:title="@string/select_lookup" />
@@ -24,11 +24,11 @@
                 android:id="@+id/menu_leaderboards"
                 android:title="@string/select_leaderboards" />
             <item
-                android:id="@+id/menu_setings"
+                android:id="@+id/menu_settings"
                 android:title="@string/select_settings" />
             <item
                 android:id="@+id/menu_logout"
-                android:title="@string/select_lookup" />
+                android:title="@string/select_logout" />
         </menu>
     </item>
 </menu>

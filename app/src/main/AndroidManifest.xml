@@ -39,6 +39,46 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="mattressmoney.myapplication.ActivityTwo" />
         </activity>
+        <activity
+            android:name=".BaseActivity"
+            android:label="@string/title_activity_base"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mattressmoney.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Lookup"
+            android:label="@string/title_activity_lookup"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mattressmoney.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Sell"
+            android:label="@string/title_activity_sell"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mattressmoney.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Leaderboards"
+            android:label="@string/title_activity_leaderboards"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mattressmoney.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mattressmoney.myapplication.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
