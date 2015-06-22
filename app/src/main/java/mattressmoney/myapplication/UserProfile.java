@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -21,6 +22,22 @@ public class UserProfile extends ActionBarActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(false);
         actionBar.setDisplayHomeAsUpEnabled(false);
+
+
+        LinearLayout stocks_list = (LinearLayout) findViewById(R.id.profile_stocksowned);
+
+        for (int i = 1; i <= 25; i++){
+            View current_item = getLayoutInflater().inflate(R.layout.list_item, null);
+
+            View bg = current_item.findViewById(R.id.list_item_LL);
+            if (i % 2 == 0){
+                bg.setBackgroundColor(getResources().getColor(R.color.grey));
+            } else {
+                bg.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+
+            stocks_list.addView(current_item);
+        }
     }
 
     @Override

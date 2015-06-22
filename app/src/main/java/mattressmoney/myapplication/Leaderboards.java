@@ -15,6 +15,7 @@ import android.widget.TextView;
 public class Leaderboards extends ActionBarActivity {
 
     int z;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

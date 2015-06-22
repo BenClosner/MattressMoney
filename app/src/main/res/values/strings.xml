@@ -23,6 +23,9 @@
     <string name="setting">MISC SETTINGS</string>
     <string name="about">About Us</string>
 
+    <!-- profile activity -->
+    <string name="overview">ph user name</string>
+
     <!-- dropdown menu select items -->
     <string name="select_menu_base">Menu</string>
     <string name="select_profile">Profile</string>

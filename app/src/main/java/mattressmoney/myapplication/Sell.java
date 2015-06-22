@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -21,6 +23,23 @@ public class Sell extends ActionBarActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(false);
         actionBar.setDisplayHomeAsUpEnabled(false);
+
+        LinearLayout owned_list = (LinearLayout) findViewById(R.id.sell_owned_stocks);
+
+        for (int x = 1; x <=10; x++){
+            View current_item = getLayoutInflater().inflate(R.layout.list_item, null);
+
+            View bg = current_item.findViewById(R.id.list_item_LL);
+            if (x % 2 == 0){
+                bg.setBackgroundColor(getResources().getColor(R.color.grey));
+            } else {
+                bg.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+
+            owned_list.addView(current_item);
+
+        }
+
     }
 
     @Override
