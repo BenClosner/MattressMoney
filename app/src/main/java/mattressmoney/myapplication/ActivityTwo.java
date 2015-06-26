@@ -15,12 +15,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListener {
+public class ActivityTwo extends BaseActivity implements ActionBar.TabListener {
 
     public ViewPager viewPager;
     private MyAdapter myAdapter;
     private ActionBar actionBar;
     private String[] tabs = {"Owned", "Hot ", "Popular"};
+    public int opened = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,6 @@ public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListe
 
         //set up action bar
         actionBar = getSupportActionBar();
-        actionBar.setHomeButtonEnabled(false);
-        actionBar.setDisplayHomeAsUpEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         //implement switching tabs
@@ -69,10 +68,12 @@ public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListe
             }
 
             @Override
-            public void onPageScrolled(int one, float two, int three) {}
+            public void onPageScrolled(int one, float two, int three) {
+            }
 
             @Override
-            public void onPageScrollStateChanged(int one) {}
+            public void onPageScrollStateChanged(int one) {
+            }
         });// end of changeListener
     }//end of onCreate
 
@@ -121,48 +122,4 @@ public class ActivityTwo extends ActionBarActivity implements ActionBar.TabListe
 
         return true;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
-        switch (item.getItemId()){
-            case R.id.menu_profile:
-                Intent profileintent = new Intent(this, UserProfile.class);
-                profileintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(profileintent);
-                break;
-            case R.id.menu_stocks:
-                Intent stocksintent = new Intent(this, ActivityTwo.class);
-                stocksintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(stocksintent);
-                break;
-            case R.id.menu_lookup:
-                Intent lookupintent = new Intent(this, Lookup.class);
-                lookupintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(lookupintent);
-                break;
-            case R.id.menu_sell:
-                Intent sellintent = new Intent(this, Sell.class);
-                sellintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(sellintent);
-                break;
-            case R.id.menu_leaderboards:
-                Intent lbintent = new Intent(this, Leaderboards.class);
-                lbintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(lbintent);
-                break;
-            case R.id.menu_settings:
-                Intent setintent = new Intent(this, Settings.class);
-                setintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(setintent);
-                break;
-            case R.id.menu_logout:
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 }

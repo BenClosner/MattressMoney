@@ -9,12 +9,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import mattressmoney.myapplication.JSONparser;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 
 public class MainActivity extends ActionBarActivity {
-
-    public final static String EXTRA_MESSAGE = "mattressmoney.myapplication.MESSAGE";
-    String msg = "Android : ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,8 @@ public class MainActivity extends ActionBarActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        JSONparser.convert(JSONparser.phjson);
     }
 
     @Override

@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-public class Leaderboards extends ActionBarActivity {
+public class Leaderboards extends BaseActivity {
 
     int z;
 
@@ -20,11 +20,6 @@ public class Leaderboards extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboards);
-
-        //disable home arrow on actionbar
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeButtonEnabled(false);
-        actionBar.setDisplayHomeAsUpEnabled(false);
 
         //make some placeholder leaders
         LinearLayout leaderboards_ll = (LinearLayout) findViewById(R.id.leaderboard_ll);
@@ -66,7 +61,7 @@ public class Leaderboards extends ActionBarActivity {
         supbar.setDisplayShowTitleEnabled(false);
 
 
-        //hack a custom view into the action bar
+        //put a custom view into the action bar
         //first open up a view, modify it, and add it with setCustomView
         View title_and_money = getLayoutInflater().inflate(R.layout.actionbar, null);
 
@@ -84,46 +79,4 @@ public class Leaderboards extends ActionBarActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
-        switch (item.getItemId()){
-            case R.id.menu_profile:
-                Intent profileintent = new Intent(this, UserProfile.class);
-                profileintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(profileintent);
-                break;
-            case R.id.menu_stocks:
-                Intent stocksintent = new Intent(this, ActivityTwo.class);
-                stocksintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(stocksintent);
-                break;
-            case R.id.menu_lookup:
-                Intent lookupintent = new Intent(this, Lookup.class);
-                lookupintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(lookupintent);
-                break;
-            case R.id.menu_sell:
-                Intent sellintent = new Intent(this, Sell.class);
-                sellintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(sellintent);
-                break;
-            case R.id.menu_leaderboards:
-                Intent lbintent = new Intent(this, Leaderboards.class);
-                lbintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(lbintent);
-                break;
-            case R.id.menu_settings:
-                Intent setintent = new Intent(this, Settings.class);
-                setintent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(setintent);
-                break;
-            case R.id.menu_logout:
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
