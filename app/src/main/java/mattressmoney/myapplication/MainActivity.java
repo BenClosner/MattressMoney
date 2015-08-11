@@ -1,6 +1,7 @@
 package mattressmoney.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -28,6 +29,14 @@ public class MainActivity extends ActionBarActivity {
         actionBar.hide();
 
         JSONparser.convert(JSONparser.phjson);
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        //instead of hard coding 100, make a call to server and get real monies value
+        editor.putLong("User_money", 151);
+        editor.putString("User_name", "User_name");
+        editor.apply();
+
     }
 
     @Override
