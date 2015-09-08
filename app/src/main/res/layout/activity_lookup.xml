@@ -42,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:imeOptions="actionDone"
+            android:maxLength="6"
             android:hint="Number"
             android:layout_toRightOf="@id/lookup_stock_price"
             android:selectAllOnFocus="true">
@@ -57,6 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:id="@+id/lookup_total"
                 android:text=" =TOTAL" />
 
             <Button
@@ -65,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:text="BUY"
+                android:onClick="BuyButton"
                 android:layout_gravity="bottom"/>
 
 
@@ -146,6 +149,7 @@
                 android:inputType="textCapCharacters"
                 android:layout_gravity="center"
                 android:imeOptions="actionDone"
+                android:id="@+id/lookup_enter_ticker"
                 android:hint="Enter Ticker" />
 
             <TextView
@@ -169,6 +173,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:text="LOOKUP"
+            android:onClick="LookupButton"
             android:layout_gravity="center" />
 
 

@@ -6,11 +6,14 @@ import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -20,6 +23,25 @@ public class Lookup extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lookup);
+
+        EditText sellstock = (EditText) this.findViewById(R.id.lookup_buynumber);
+        sellstock.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                TextView tv = (TextView) findViewById(R.id.lookup_total);
+
+                long priceTimesQuant = Long.parseLong(s.toString()) * 3;
+                tv.setText(Long.toString(priceTimesQuant));
+            }
+        });
     }
 
     @Override
@@ -37,6 +59,7 @@ public class Lookup extends BaseActivity {
 
         return true;
     }
+    @Override
     public void onResume() {
         super.onResume();
         //first open up a view, modify it, and add it with setCustomView
@@ -54,5 +77,11 @@ public class Lookup extends BaseActivity {
 
         //add the custom view to the action bar
         getSupportActionBar().setCustomView(title_and_money);
+    }
+    public void BuyButton(View view){
+
+    }
+    public void LookupButton(View view) {
+
     }
 }

@@ -19,6 +19,10 @@ public class UserProfile extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        TextView username = (TextView)this.findViewById(R.id.profile_username);
+        username.setText(pref.getString("User_name", ""));
+
         LinearLayout stocks_list = (LinearLayout) findViewById(R.id.profile_stocksowned);
 
         for (int i = 1; i <= 25; i++){
